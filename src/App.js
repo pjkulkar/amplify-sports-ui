@@ -56,7 +56,8 @@ function xyz () {
 const useFetchData = (url) => {
   const [state, setState] = useState({ isLoading: true, error: null, data: null });
   useEffect(() => {
-    //let isMounted = true;  
+    //let isMounted = true;
+    xyz()
     axios.get(url)
       .then((res) => {
         console.log(res.data.Items.length)

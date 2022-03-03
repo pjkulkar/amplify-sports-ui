@@ -43,17 +43,15 @@ class VideoPlayer extends React.Component {
   }
 }
 
-/*
-function xyz (callback) { 
-  axios.get(`https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos`)
+
+function xyz () { 
+  axios.get(`arn:aws:lambda:us-east-1:764213168741:function:testfunction`)
     .then(res => {
-      const filepath = res.data.Items[0].filepath.S
-      callback ({autoplay: false, controls: true,sources: [{src: filepath}]})
-    }).catch(err =>{
+          console.log(res.data.Items.length)
+          }).catch(err =>{
       console.log(err);
     })
   }
-*/
 
 const useFetchData = (url) => {
   const [state, setState] = useState({ isLoading: true, error: null, data: null });

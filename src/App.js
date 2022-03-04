@@ -10,7 +10,7 @@ import {
   AmplifySignUp,
 } from '@aws-amplify/ui-react'
 import { MdSend /* MdList */ } from 'react-icons/md'
-import axios from 'axios'
+import axios from 'axios' 
 import awsConfig from './aws-exports'
 const thumbs_up = require('./assets/thumbs_up.png');
 const thumbs_down = require('./assets/thumbs_down.png');

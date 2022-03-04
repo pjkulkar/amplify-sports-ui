@@ -176,7 +176,7 @@ function App() {
       <div style={container}>
          <input id="userId" type="text" value="1" />
          <input id="itemId" type="text" value="1" />
-         <input id="submit" name="submit" type="submit" value="Submit" onclick=getLikeXList(userId,itemId)>
+         <input id="submit" name="submit" type="submit" value="Submit" onclick=getLikeXList(userId,itemId)/>
 
 
         <table>

@@ -44,8 +44,8 @@ class VideoPlayer extends React.Component {
 }
 
 
-function xyz () { 
-   console.log("inside xyz")
+function getPopularList () { 
+   console.log("inside getPopularList")
   axios.get(`https://ekqv0wytwf.execute-api.us-west-2.amazonaws.com/test/popularlist?itemId=24&userId=10`)
     .then(res => {
           console.log(res.data.itemList)
@@ -55,11 +55,49 @@ function xyz () {
     })
   }
 
+
+
+function getLikeWatchedList () { 
+   console.log("inside getLikeWatched")
+  axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
+    .then(res => {
+          console.log(res.data.itemList)
+          console.log("called lambdA")
+          }).catch(err =>{
+      console.log(err);
+    })
+  }
+
+
+function getTopPickedList () { 
+   console.log("inside getTopPicked")
+  axios.get(`https://dujmlvrgc5.execute-api.us-west-2.amazonaws.com/test/toppicks?userId=55`)
+    .then(res => {
+          console.log(res.data.itemList)
+          console.log("called lambdA")
+          }).catch(err =>{
+      console.log(err);
+    })
+  }
+
+function getLikeXList () { 
+   console.log("inside getLikeX")
+  axios.get(`https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=24&userId=10`)
+    .then(res => {
+          console.log(res.data.itemList)
+          console.log("called lambdA")
+          }).catch(err =>{
+      console.log(err);
+    })
+  }
 const useFetchData = (url) => {
   const [state, setState] = useState({ isLoading: true, error: null, data: null });
   useEffect(() => {
     //let isMounted = true;
-    xyz();
+    getLikeWatchedList();
+    getTopPickedList ();
+    getLikeXList ();
+    getPopularList ();
     axios.get(url)
       .then((res) => {
         console.log(res.data.Items.length)

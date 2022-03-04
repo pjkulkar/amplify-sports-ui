@@ -80,7 +80,7 @@ function getTopPickedList () {
     })
   }
 
-function getLikeXList (int itemId, int userId) { 
+function getLikeXList (itemId,userId) { 
   console.log("inside getLikeX")
   const query = "https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=" + itemId + "&userId=" + userId;
   console.log(query);

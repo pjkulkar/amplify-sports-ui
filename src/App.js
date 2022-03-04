@@ -43,7 +43,7 @@ class VideoPlayer extends React.Component {
   }
 }
 
-
+/*
 function xyz () { 
    console.log("inside xyz")
   axios.get(`https://171a2mzitd.execute-api.us-east-2.amazonaws.com/test/accessmorelikexitemid?itemId=24`)
@@ -54,12 +54,12 @@ function xyz () {
       console.log(err);
     })
   }
-
+*/
 const useFetchData = (url) => {
   const [state, setState] = useState({ isLoading: true, error: null, data: null });
   useEffect(() => {
     //let isMounted = true;
-    xyz();
+  //  xyz();
     axios.get(url)
       .then((res) => {
         console.log(res.data.Items.length)

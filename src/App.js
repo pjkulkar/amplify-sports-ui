@@ -43,7 +43,7 @@ class VideoPlayer extends React.Component {
   }
 }
 
-
+/*
 function xyz () { 
    console.log("inside xyz")
   axios.get(`arn:aws:lambda:us-east-1:764213168741:function:testfunction`)
@@ -54,7 +54,7 @@ function xyz () {
       console.log(err);
     })
   }
-
+*/
 const useFetchData = (url) => {
   const [state, setState] = useState({ isLoading: true, error: null, data: null });
   useEffect(() => {
@@ -108,7 +108,7 @@ function populateDate(username,video,vote){
 
 function App() {
 
-  const xyz = xyz();
+  /*const xyz = xyz();*/
   const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>There was an error: {error}</div>;

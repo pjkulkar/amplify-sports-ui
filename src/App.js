@@ -48,7 +48,7 @@ function xyz () {
    console.log("inside xyz")
   axios.get(`https://171a2mzitd.execute-api.us-east-2.amazonaws.com/test/accessmorelikexitemid?itemId=24`)
     .then(res => {
-          console.log(res.itemList)
+          console.log(res.data.itemList)
           console.log("called lambdA")
           }).catch(err =>{
       console.log(err);

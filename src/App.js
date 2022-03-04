@@ -80,9 +80,11 @@ function getTopPickedList () {
     })
   }
 
-function getLikeXList () { 
-   console.log("inside getLikeX")
-  axios.get(`https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=24&userId=10`)
+function getLikeXList (int itemId, int userId) { 
+  console.log("inside getLikeX")
+  const query = "https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=" + itemId + "&userId=" + userId;
+  console.log(query);
+  axios.get(query)
     .then(res => {
           console.log(res.data.itemList)
           console.log("called lambdA")
@@ -98,7 +100,7 @@ const useFetchData = (url) => {
     //let isMounted = true;
     getLikeWatchedList();
     getTopPickedList ();
-    getLikeXList ();
+   // getLikeXList ();
     getPopularList ();
     axios.get(url)
       .then((res) => {
@@ -172,7 +174,11 @@ function App() {
       </nav>
       
       <div style={container}>
-        
+         <input id="userId" type="text" value="1" />
+         <input id="itemId" type="text" value="1" />
+         <input id="submit" name="submit" type="submit" value="Submit" onclick=getLikeXList(userId,itemId)>
+
+
         <table>
           <tbody>
             <tr>

@@ -209,7 +209,7 @@ function App() {
             {data.map(function(object, i){
               //console.log(object);
                 return <tr><td><VideoPlayer { ...object  }/></td><td><img src={thumbs_up} alt="Thumbs Up" onClick={() => populateDate('hnvasa@gmail.com',object.sources[0].src,'upvote')} /><img src={thumbs_down} alt="Thumbs Down" onClick={() => populateDate('hnvasa@gmail.com',object.sources[0].src,'downvote')} /></td></tr>;
-            })}
+            })} 
           </tbody>
         </table>
 

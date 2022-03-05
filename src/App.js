@@ -222,7 +222,7 @@ function App() {
         <AmplifySignOut />
       </div>
     </AmplifyAuthenticator>
-    
+     
     
   );
 }

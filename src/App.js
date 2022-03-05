@@ -212,7 +212,7 @@ function App() {
 
       
       <div className='sign-out'>
-        <AmplifySignOut />
+        <AmplifySignOut /> 
       </div>
     </AmplifyAuthenticator>
      

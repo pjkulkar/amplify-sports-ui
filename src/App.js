@@ -148,8 +148,13 @@ function populateDate(username,video,vote){
   };
 
 
-function App() {
 
+function App() {
+  
+  const [userId, setuserId] = useState("");
+  const [movieId, setmovieId] = useState("");
+  
+  
   const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>There was an error: {error}</div>;
@@ -174,10 +179,21 @@ function App() {
       </nav>
       
       <div style={container}>
-         <input id="userId" type="text" value="1" />
-         <input id="itemId" type="text" value="1" />
-         <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,itemId)}/>
-
+        
+                                                                                
+          <input
+          type="text"
+          value={userId}
+          placeholder="userId"
+          onChange={(e) => setuserId(e.target.value)}
+        />
+        <input
+          type="text"
+          value={movieId}
+          placeholder="movieId"
+          onChange={(e) => setmovieId(e.target.value)}
+        />
+         <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
 
         <table>
           <tbody>

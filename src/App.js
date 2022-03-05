@@ -193,6 +193,11 @@ function App() {
           placeholder="movieId"
           onChange={(e) => setmovieId(e.target.value)}
         />
+         console.log("userId");
+         console.log(userId);
+         console.log("movieId");
+         console.log(movieId);
+
          <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
 
         <table>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import './App.css'
-import Table from "./Table";
+import Table from "./Table"
 import Amplify from 'aws-amplify'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'

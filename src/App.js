@@ -13,36 +13,10 @@ import {
 import { MdSend /* MdList */ } from 'react-icons/md'
 import axios from 'axios' 
 import awsConfig from './aws-exports'
-const thumbs_up = require('./assets/thumbs_up.png');
-const thumbs_down = require('./assets/thumbs_down.png');
+
+
 Amplify.configure(awsConfig)
 
-
-class VideoPlayer extends React.Component {
-
-  componentDidMount() {
-    this.player = videojs(this.videoNode, this.props);
-  }
-
-  componentWillUnmount() {
-    if (this.player) {
-      this.player.dispose()
-    }
-  }
-
-  render() {
-    return (
-      
-      <div data-vjs-player style={{
-          width: 540, height: 320
-        }}>
-        <video  ref={(node) => { this.videoNode = node; }} className="video-js" />
-      </div>
-      
-
-    );
-  }
-}
 
 
 function getPopularList () { 
@@ -95,50 +69,6 @@ function getLikeXList (itemId,userId) {
   }
 
 
-const useFetchData = (url) => {
-  const [state, setState] = useState({ isLoading: true, error: null, data: null });
-  useEffect(() => {
-    //let isMounted = true;
-    getLikeWatchedList();
-    getTopPickedList ();
-   // getLikeXList ();
-    getPopularList ();
-    axios.get(url)
-      .then((res) => {
-        console.log(res.data.Items.length)
-        if(res.data.Items.length === 3){
-          setState(
-          { isLoading: false, data: [
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[0].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[1].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[2].filepath.S}]}], 
-            error: null });
-        } else if (res.data.Items.length === 4){
-          setState(
-          { isLoading: false, data: [
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[0].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[1].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[2].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[3].filepath.S}]}], 
-            error: null });
-        } else if (res.data.Items.length === 5){
-          setState(
-          { isLoading: false, data: [
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[0].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[1].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[2].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[3].filepath.S}]},
-            {autoplay: false, controls: true,sources: [{src: res.data.Items[4].filepath.S}]}], 
-            error: null });
-        }
-      })
-      .catch((error) => {
-        setState({ isLoading: false, data: null, error });
-      });
-  }, [url]);
-  return state;
-};
-
 function populateDate(username,video,vote){
     console.log(username,video,vote);
     axios.post('https://dcyxom2xcc.execute-api.us-east-1.amazonaws.com/prod/updaterecord', {
@@ -155,10 +85,7 @@ function App() {
   const [userId, setuserId] = useState("");
   const [movieId, setmovieId] = useState("");
   
-  
-  const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>There was an error: {error}</div>;
+    
 
   return (
     
@@ -208,12 +135,17 @@ function App() {
 
 
       </div>
+                                                                                
       </div>
 
       
       <div className='sign-out'>
         <AmplifySignOut /> 
       </div>
+      <div>
+        <Table columns={columns} data={data} />
+      </div>                                                                    
+                                                                                
     </AmplifyAuthenticator>
      
     

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTable, useFilters, useSortBy } from "react-table";
-
+ 
 export default function Table({ columns, data }) {
   const [filterInput, setFilterInput] = useState("");
   // Use the state and functions returned from useTable to build your UI

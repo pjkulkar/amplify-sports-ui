@@ -1,5 +1,6 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import './App.css'
+import Table from "./Table";
 import Amplify from 'aws-amplify'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
@@ -193,11 +194,7 @@ function App() {
           placeholder="movieId"
           onChange={(e) => setmovieId(e.target.value)}
         />
-         console.log("userId");
-         console.log(userId);
-         console.log("movieId");
-         console.log(movieId);
-
+         
          <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
 
         <table>
@@ -206,10 +203,6 @@ function App() {
               <th>Video</th>
               <th>Vote</th>
             </tr>
-            {data.map(function(object, i){
-              //console.log(object);
-                return <tr><td><VideoPlayer { ...object  }/></td><td><img src={thumbs_up} alt="Thumbs Up" onClick={() => populateDate('hnvasa@gmail.com',object.sources[0].src,'upvote')} /><img src={thumbs_down} alt="Thumbs Down" onClick={() => populateDate('hnvasa@gmail.com',object.sources[0].src,'downvote')} /></td></tr>;
-            })} 
           </tbody>
         </table>
 

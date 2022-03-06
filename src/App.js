@@ -16,7 +16,21 @@ import awsConfig from './aws-exports'
 
 Amplify.configure(awsConfig)
 
+  state = {
+    loading: true,
+    items: null
+  };
 
+
+ componentDidMount() {
+    const response = await getLikeXList(24,32); 
+    const data = await response.json();
+    this.setState({ items: data.itemList[0], loading: false });
+  }
+
+ componentWillUnmount() {
+  
+  }
 
 function getPopularList () { 
    console.log("inside getPopularList")

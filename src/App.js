@@ -126,16 +126,58 @@ function App() {
         <div>
         <table>
       
-          <thead> <tr> <th> "MovieId" </th></tr></thead> 
+          <thead> <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
           <tbody>
-            <tr>
-              <th>Video</th>
-              <th>Vote</th>
-            </tr>
-          </tbody>
+            
+                  <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+            </tbody>
         </table>
 
       </div>
+                                                                                
+        <div>
+        <table>
+      
+          <thead> <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+          <tbody>
+            
+                  <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+            </tbody>
+        </table>
+
+          <div>
+        <table>
+      
+          <thead> <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+          <tbody>
+            
+                  <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+            </tbody>
+        </table>
+                                                                                
+        <div>
+        <table>
+      
+          <thead> <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+          <tbody>
+            
+                  <tr> <th> MovieId </th></tr>
+                  <tr> <th> MovieName </th></tr></thead> 
+            </tbody>
+        </table>
+
+      </div>                                                                        
+
+      </div>                                                                      
+                                                                                
+      </div>                                                                        
       
 
       </div>

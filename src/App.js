@@ -125,54 +125,58 @@ function App() {
 
         <div>
         <table>
-      
-          <thead> <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
           <tbody>
-            
-                  <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
-            </tbody>
+          </tbody>
         </table>
-
+      
       </div>
                                                                                 
         <div>
         <table>
-      
-          <thead> <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
           <tbody>
-            
-                  <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
-            </tbody>
+          </tbody>
         </table>
-
-          <div>
-        <table>
       
-          <thead> <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
-          <tbody>
-            
-                  <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
-            </tbody>
-        </table>
-                                                                                
+      </div>
         <div>
         <table>
-      
-          <thead> <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
           <tbody>
-            
-                  <tr> <th> MovieId </th></tr>
-                  <tr> <th> MovieName </th></tr></thead> 
-            </tbody>
+          </tbody>
         </table>
-
+      
+      </div>
+        <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      
+      </div>
+   
       </div>                                                                        
 
       </div>                                                                      

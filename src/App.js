@@ -124,7 +124,7 @@ function App() {
          <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
 
         <div>
-        <br>Top Picks of Videos for you:</br>                                                                  
+    //    <br>Top Picks of Videos for you:</br>                                                                  
         <table>
           <thead>
             <tr>
@@ -137,7 +137,7 @@ function App() {
         </table>
       
       </div>
-      <br>Videos Like you watched before</br>                                                                  
+   //   <br>Videos Like you watched before</br>                                                                  
                                                                                 
         <div>
         <table>
@@ -152,7 +152,7 @@ function App() {
         </table>
       
       </div>
-    <br>Most Popular Videos</br>                                                                  
+//    <br>Most Popular Videos</br>                                                                  
                                                                                     
         <div>
         <table>
@@ -167,7 +167,7 @@ function App() {
         </table>
       
       </div>
-   <br>Videos Recommended for you</br>                                                                  
+//   <br>Videos Recommended for you</br>                                                                  
                                                                                     
         <div>
         <table>

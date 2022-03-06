@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import './App.css'
-import Table from './Table'
 import Amplify from 'aws-amplify'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
@@ -124,7 +123,10 @@ function App() {
          
          <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
 
+        <div>
         <table>
+      
+          <thead> <tr> <th> "MovieId" </th></tr></thead> 
           <tbody>
             <tr>
               <th>Video</th>
@@ -133,18 +135,15 @@ function App() {
           </tbody>
         </table>
 
+      </div>
+      
 
       </div>
                                                                                 
       </div>
 
       
-      <div className='sign-out'>
-        <AmplifySignOut /> 
-      </div>
-      <div>
-        <Table columns={columns} data={data} />
-      </div>                                                                    
+                                                             
                                                                                 
     </AmplifyAuthenticator>
      

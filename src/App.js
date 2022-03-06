@@ -22,16 +22,7 @@ Amplify.configure(awsConfig)
   };
 
 
- componentDidMount() {
-    const response = await getLikeXList(24,32); 
-    const data = await response.json();
-    this.setState({ items: data.itemList[0], loading: false });
-  }
-
- componentWillUnmount() {
-  
-  }
-
+ 
 function getPopularList () { 
    console.log("inside getPopularList")
   axios.get(`https://ekqv0wytwf.execute-api.us-west-2.amazonaws.com/test/popularlist?itemId=24&userId=10`)
@@ -98,25 +89,29 @@ function App() {
   const [userId, setuserId] = useState("");
   const [movieId, setmovieId] = useState("");
   
-    
+  const response = await getLikeXList(24,32); 
+  const data = await response.json();
+  this.setState({ items: data.itemList[0], loading: false });
+ 
 
   return (
     
     
     <AmplifyAuthenticator>
       <AmplifySignIn
-        headerText='AnyCompany video team, Sign-In with Your E-Mail Address'
+        headerText='Please Sign-In with Your E-Mail Address'
         slot='sign-in'
       />
       <AmplifySignUp
-        headerText='AnyCompany video team, Sign-Up with Your E-Mail Address'
+        headerText='Plaese Sign-Up with Your E-Mail Address'
         slot='sign-up'
       />
+    
     
 
     <div>
       <nav style={nav}>
-        <p style={navHeading}>AnyCompany Sports Streaming</p>
+        <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
       
       <div style={container}>

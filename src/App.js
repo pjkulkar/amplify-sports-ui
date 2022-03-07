@@ -128,19 +128,6 @@ function App() {
         </table>
       
       </div>
-        <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      
-      </div>
         
    
       </div>                                                                        

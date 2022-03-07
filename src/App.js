@@ -47,7 +47,7 @@ function getLikeXList (itemId,userId) {
   axios.get(query)
     .then(res => {
           console.log(res.data.itemList)
-          console.log("called lambdA")
+          console.log("called lambdA") 
           }).catch(err =>{
       console.log(err);
     })

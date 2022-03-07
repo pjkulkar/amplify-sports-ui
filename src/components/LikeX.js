@@ -4,6 +4,8 @@ import axios from 'axios';
 export default class LikeX extends React.Component {
   state = {
     itemsList: []
+    isLoading:true;
+    error:false;
   }
 
   componentDidMount() {
@@ -13,13 +15,23 @@ export default class LikeX extends React.Component {
         const itemsList = res.data.itemList;
         console.log(itemsList);
         this.setState({ itemsList });
-        console.log("inside mount after setstate")
-        console.log(this.state.itemsList);
-        console.log("inside mount after list")
+        if(itemsList){
+          this.setState(isLoading:false, error:false);
+          console.log("inside mount after setstate")
+          console.log(this.state.itemsList);
+          console.log("inside mount after list")
+        }
       })
+     .catch((error) => {
+        setState({ isLoading: false, error:true });
+      });
   }
 
   render() {
+    console.log('in render: ' + this.state.isLoading)
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>There was an error: {error}</div>;
+    
     console.log("inside render")
     console.log(this.state.itemlist);
         console.log("inside render before return")

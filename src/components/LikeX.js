@@ -2,12 +2,16 @@ import React from 'react';
 import axios from 'axios';
   
 export default class LikeX extends React.Component {
-  state = {
+  
+  constructor(){
+  super()
+  this.state = {
     itemsList: [],
     isLoading:true,
     error:false
-  }
-
+    }
+  } 
+  
   componentDidMount() {
    axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
       .then(res => {
@@ -20,8 +24,8 @@ export default class LikeX extends React.Component {
         console.log('movList item 0' + itemsList[0].itemId)
         this.setState({ itemsList})
         console.log('this.state.itemslist' )
-         console.log( this.setState.itemsList);
-        if(this.setState.itemsList){
+         console.log( this.state.itemsList);
+        if(this.state.itemsList){
           this.setState({isLoading:false, error:false});
           console.log("inside mount after setstate")
           console.log(this.state.itemsList);

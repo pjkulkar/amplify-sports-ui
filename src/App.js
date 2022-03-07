@@ -101,35 +101,6 @@ function App() {
          
          <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
 
-        <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      
-      </div>
-                                                                                
-       <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      
-      </div>                                                                        
-        
-      
    
       </div>
       <div><br/></div>                                                                          

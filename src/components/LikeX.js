@@ -77,16 +77,7 @@ export default class LikeX extends React.Component {
         
       </div>
       
-      <div>
-      <ul>
-        {
-           this.state.itemsList
-            .map(itemList =>
-              <li key={itemList.itemId}>{itemList.itemId}</li>
-            )
-        }
-      </ul>
-      </div>
+    
       </div>
       
     )

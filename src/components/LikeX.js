@@ -11,6 +11,7 @@ export default class LikeX extends React.Component {
       .then(res => {
         console.log(res.data.itemList)
         const itemsList = res.data.itemList;
+        console.log(itemsList);
         this.setState({ itemsList });
       })
   }

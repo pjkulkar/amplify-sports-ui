@@ -65,32 +65,7 @@ export default class LikeX extends React.Component {
         }
       </ul>
       </div>
-      <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Movie Id</th>
-                <th>Movie Name</th>
-               </tr>
-            </thead>
-            <tbody>
-            {this.state.itemList.length ? 
-              this.state.itemList.map(itemLst => (
-                <tr>
-                  <td>{itemLst.itemId}</td>
-                  <td>Name</td>
-                </tr>
-              ))
-              : 
-              (<tr>
-                <td>-</td>
-                <td>-</td>
-               </tr>)
-            }
-            </tbody>
-          </table>
-        </div>
-    </div>
+      
     )
   }
 }

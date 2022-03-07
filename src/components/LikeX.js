@@ -3,9 +3,9 @@ import axios from 'axios';
   
 export default class LikeX extends React.Component {
   state = {
-    itemsList: []
-    isLoading:true;
-    error:false;
+    itemsList: [],
+    isLoading:true,
+    error:false
   }
 
   componentDidMount() {

@@ -16,20 +16,6 @@ import awsConfig from './aws-exports'
 
 Amplify.configure(awsConfig)
 
-  
- 
-function getPopularList () { 
-   console.log("inside getPopularList")
-  axios.get(`https://ekqv0wytwf.execute-api.us-west-2.amazonaws.com/test/popularlist?itemId=24&userId=10`)
-    .then(res => {
-          console.log(res.data.itemList)
-          console.log("called lambdA")
-          }).catch(err =>{
-      console.log(err);
-    })
-  }
-
-
 
 function getLikeWatchedList () { 
    console.log("inside getLikeWatched")

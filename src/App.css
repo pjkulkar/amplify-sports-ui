@@ -206,7 +206,7 @@ body {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 25%;
 }
 
 th,
@@ -222,7 +222,7 @@ th {
 }
 
 td {
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(211, 211, 211);
 }
 
 form {

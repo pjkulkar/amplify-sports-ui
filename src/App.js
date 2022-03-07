@@ -82,16 +82,21 @@ function populateDate(username,video,vote){
     })
   };
 
-
+const useFetchData = (userId,ItemId) => {
+  const [state, setState] = useState({ isLoading: true, error: null, data: null });
+  data = getLikeXList(userId,movieId)
+  return state;
+};
 
 function App() {
   
   const [userId, setuserId] = useState("");
   const [movieId, setmovieId] = useState("");
   
-  const response = await getLikeXList(24,32); 
-  const data = await response.json();
-  this.setState({ items: data.itemList[0], loading: false });
+  const { isLoading, data, error } = useFetchData(10,13);
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>There was an error: {error}</div>;
+  
  
 
   return (

@@ -23,14 +23,14 @@ export default class LikeX extends React.Component {
         }
       })
      .catch((error) => {
-        setState({ isLoading: false, error:true });
+        this.setState({isLoading:false, error:true });
       });
   }
 
   render() {
     console.log('in render: ' + this.state.isLoading)
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>There was an error: {error}</div>;
+    if (this.state.isLoading) return <div>Loading...</div>;
+    if (this.state.error) return <div>There was an error: {error}</div>;
     
     console.log("inside render")
     console.log(this.state.itemlist);

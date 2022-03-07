@@ -56,6 +56,20 @@ export default class LikeX extends React.Component {
     return (
      <div>
      <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Movie Id</th>
+                <th>Movie Name</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        
+      </div>
+      
+      <div>
       <ul>
         {
            this.state.itemsList

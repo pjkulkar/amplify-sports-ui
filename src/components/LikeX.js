@@ -54,6 +54,7 @@ export default class LikeX extends React.Component {
     
     console.log("inside render before return")
     return (
+     <div>
       <ul>
         {
            this.state.itemsList
@@ -62,6 +63,7 @@ export default class LikeX extends React.Component {
             )
         }
       </ul>
+      </div>
       <div className="LikeXTable">
         <header className="LikeXTable-header">
           <Table>

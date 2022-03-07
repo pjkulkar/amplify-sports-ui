@@ -63,7 +63,7 @@ export default class LikeX extends React.Component {
                 <th>Movie Name</th>
                </tr>
             </thead>
-            <tbody>
+            <tbody> 
             {
               this.state.itemsList
               .map(itemList =>

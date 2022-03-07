@@ -57,8 +57,8 @@ export default class LikeX extends React.Component {
       <ul>
         {
            this.state.itemsList
-            .map(item =>
-              <li key={item.itemId}>item.itemId</li>
+            .map(itemList =>
+              <li key={itemList.itemId}>{itemList.itemId}</li>
             )
         }
       </ul>

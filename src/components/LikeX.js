@@ -64,6 +64,14 @@ export default class LikeX extends React.Component {
                </tr>
             </thead>
             <tbody>
+            {
+              this.state.itemsList
+              .map(itemList =>
+                <tr><td>{itemList.itemId}</td>
+                    <td>{itemList.itemId}</td>
+                </tr>
+              )
+             }
             </tbody>
           </table>
         

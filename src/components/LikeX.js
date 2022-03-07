@@ -7,7 +7,7 @@ export default class LikeX extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
+   axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
       .then(res => {
         const itemsList = res.data;
         this.setState({ itemsList });

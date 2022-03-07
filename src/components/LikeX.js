@@ -11,11 +11,12 @@ export default class LikeX extends React.Component {
   componentDidMount() {
    axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
       .then(res => {
-        console.log(res.data.itemList)
-        const itemsList = res.data.itemList;
-        console.log(itemsList);
-        this.setState({ itemsList });
-        if(itemsList){
+        console.log('res.data.itemslist' + res.data.itemList)
+        const movList = res.data.itemList
+        console.log('movList' + movList)
+        this.setState({ itemsList:movList })
+        console.log('this.state.itemslist' + this.setState.itemsList);
+        if(this.setState.itemsList){
           this.setState({isLoading:false, error:false});
           console.log("inside mount after setstate")
           console.log(this.state.itemsList);

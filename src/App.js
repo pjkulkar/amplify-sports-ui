@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import './App.css'
 import Amplify from 'aws-amplify'
-import LikeX from 'LikeX.js'
+import LikeX from './LikeX.js'
 
 import {
   AmplifyAuthenticator,

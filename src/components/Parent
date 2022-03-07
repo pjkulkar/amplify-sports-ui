@@ -1,0 +1,31 @@
+import React from 'react';
+  
+export default class Parent extends React.Component {
+  
+  constructor(){
+  super()
+  this.state = {
+    userId:44,
+    itemId:78
+    }
+  } 
+  render() {
+
+        return (
+
+            <div>
+
+                 <LikeX/>      
+
+                 <LikeX dataFromParent = {this.state.data} />
+
+            </div>
+
+        );    
+        
+     }
+
+
+  
+}
+

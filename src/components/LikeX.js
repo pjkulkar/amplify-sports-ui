@@ -28,12 +28,14 @@ export default class LikeX extends React.Component {
   }
 
   render() {
-    console.log('in render: ' + this.state.isLoading)
+    console.log('in render: isloading ' + this.state.isLoading)
+    console.log('in render: itemsList ' + this.state.itemsList)
+    console.log('in render: error ' + this.state.error)
     if (this.state.isLoading) return <div>Loading...</div>;
     if (this.state.error) return <div>There was an error:{this.state.error}</div>;
     
     console.log("inside render")
-    console.log(this.state.itemlist);
+    console.log(this.state.itemslist);
         console.log("inside render before return")
     return (
       <ul>

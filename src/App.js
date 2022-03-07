@@ -68,11 +68,11 @@ function App() {
     
     <AmplifyAuthenticator>
       <AmplifySignIn
-        headerText='Please Sign-In with Your E-Mail Address'
+        headerText='Please Sign-in with Your E-Mail Address'
         slot='sign-in'
       />
       <AmplifySignUp
-        headerText='Plaese Sign-Up with Your E-Mail Address'
+        headerText='Plaese Sign-up with Your E-Mail Address'
         slot='sign-up'
       />
     

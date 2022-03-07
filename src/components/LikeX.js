@@ -13,20 +13,19 @@ export default class LikeX extends React.Component {
         const itemsList = res.data.itemList;
         console.log(itemsList);
         this.setState({ itemsList });
+        console.log(this.state.itemsList);
       })
   }
 
   render() {
+    console.log(this.state.itemlist);
     return (
       <ul>
         {
-          console.log("inside render")
-          console.log(this.state.itemsList)
-          this.state.itemsList
+           this.state.itemsList
             .map(item =>
               <li key={item.itemId}></li>
             )
-            console.log("done")
         }
       </ul>
     )

@@ -65,8 +65,7 @@ export default class LikeX extends React.Component {
         }
       </ul>
       </div>
-      <div className="LikeXTable">
-        <header className="LikeXTable-header">
+      <div>
           <table>
             <thead>
               <tr>
@@ -90,8 +89,7 @@ export default class LikeX extends React.Component {
             }
             </tbody>
           </table>
-        </header>
-      </div>
+        </div>
     </div>
     )
   }

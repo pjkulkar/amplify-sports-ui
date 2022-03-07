@@ -65,6 +65,7 @@ export default class LikeX extends React.Component {
         }
       </ul>
       </div>
+      </div>
       
     )
   }

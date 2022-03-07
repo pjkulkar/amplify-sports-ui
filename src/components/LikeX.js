@@ -11,7 +11,9 @@ export default class LikeX extends React.Component {
   componentDidMount() {
    axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
       .then(res => {
-        console.log('res.data.itemslist' + res.data.itemList)
+        console.log('res.data.itemslist')
+        console.log(res.data.itemList)
+        
         console.log('res.data.item0' + res.data.itemList.item[0])
         const movList = res.data.itemList
         console.log('movList' + movList)

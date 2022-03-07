@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import './App.css'
 import Amplify from 'aws-amplify'
 import LikeX from './components/LikeX.js'
+import LikeX from './components/TopPicks.js'
 
 import {
   AmplifyAuthenticator,
@@ -109,7 +110,7 @@ function App() {
       </div>
       <div><br/></div>
       <div>
-          <Toppicks/>
+          <TopPicks/>
       </div>
                                                                                 
                                                                                 

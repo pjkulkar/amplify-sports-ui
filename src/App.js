@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import './App.css'
 import Amplify from 'aws-amplify'
-import videojs from 'video.js'
-import 'video.js/dist/video-js.css'
+import LikeX from 'LikeX.js'
+
 import {
   AmplifyAuthenticator,
   AmplifySignOut,
@@ -73,29 +73,12 @@ function getLikeXList (itemId,userId) {
   }
 
 
-function populateDate(username,video,vote){
-    console.log(username,video,vote);
-    axios.post('https://dcyxom2xcc.execute-api.us-east-1.amazonaws.com/prod/updaterecord', {
-      username: username,
-      video: video,
-      vote: vote
-    })
-  };
 
-const useFetchData = (userId,ItemId) => {
-  const [state, setState] = useState({ isLoading: true, error: null, data: null });
-  data = getLikeXList(userId,movieId)
-  return state;
-};
 
 function App() {
   
   const [userId, setuserId] = useState("");
   const [movieId, setmovieId] = useState("");
-  
-  const { isLoading, data, error } = useFetchData(10,13);
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>There was an error: {error}</div>;
   
  
 
@@ -118,7 +101,9 @@ function App() {
       <nav style={nav}>
         <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
-      
+      <div>
+          <LikeX/>
+      </div>
       <div style={container}>
         
                                                                                 

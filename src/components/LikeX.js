@@ -13,12 +13,16 @@ export default class LikeX extends React.Component {
         const itemsList = res.data.itemList;
         console.log(itemsList);
         this.setState({ itemsList });
+        console.log("inside mount after setstate")
         console.log(this.state.itemsList);
+        console.log("inside mount after list")
       })
   }
 
   render() {
+    console.log("inside render")
     console.log(this.state.itemlist);
+        console.log("inside render before return")
     return (
       <ul>
         {

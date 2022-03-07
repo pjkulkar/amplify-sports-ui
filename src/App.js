@@ -108,6 +108,11 @@ function App() {
           <LikeX/>
       </div>
       <div><br/></div>
+      <div>
+          <Toppicks/>
+      </div>
+                                                                                
+                                                                                
       </div>                                                                      
                                                                                 
     </AmplifyAuthenticator>

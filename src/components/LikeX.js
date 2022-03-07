@@ -16,7 +16,7 @@ export default class LikeX extends React.Component {
         console.log(itemsList);
         this.setState({ itemsList });
         if(itemsList){
-          this.setState(isLoading:false, error:false);
+          this.setState({isLoading:false, error:false});
           console.log("inside mount after setstate")
           console.log(this.state.itemsList);
           console.log("inside mount after list")

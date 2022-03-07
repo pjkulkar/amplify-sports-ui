@@ -67,7 +67,7 @@ export default class LikeX extends React.Component {
       </div>
       <div className="LikeXTable">
         <header className="LikeXTable-header">
-          <Table>
+          <table>
             <thead>
               <tr>
                 <th>Movie Id</th>
@@ -75,8 +75,8 @@ export default class LikeX extends React.Component {
                </tr>
             </thead>
             <tbody>
-            {itemList.length ? 
-              itemList.map(itemLst => (
+            {this.state.itemList.length ? 
+              this.state.itemList.map(itemLst => (
                 <tr>
                   <td>{itemLst.itemId}</td>
                   <td>Name</td>

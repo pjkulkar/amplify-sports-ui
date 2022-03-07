@@ -14,10 +14,10 @@ export default class LikeX extends React.Component {
         console.log('res.data.itemslist')
         console.log(res.data.itemList)
         
-        console.log('res.data.item0' + res.data.itemList.item[0])
+        console.log('res.data.item0' + res.data.itemList[0])
         const movList = res.data.itemList
         console.log('movList' + movList)
-        console.log('movList item 0' + movList.item[0])
+        console.log('movList item 0' + movList[0])
         this.setState({ itemsList:movList })
         console.log('this.state.itemslist' + this.setState.itemsList);
         if(this.setState.itemsList){

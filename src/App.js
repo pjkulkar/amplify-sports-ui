@@ -22,7 +22,7 @@ function getLikeWatchedList () {
   axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
     .then(res => {
           console.log(res.data.itemList)
-          console.log("called lambdA")
+          console.log("called lambdA. ss")
           }).catch(err =>{
       console.log(err);
     })

@@ -96,10 +96,7 @@ function App() {
       <nav style={nav}>
         <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
-      <div class="LikeX">
-          <LikeX/>
-      </div>
-      <div><br/></div>
+     
       <div style={container}>
         
                                                                                 
@@ -173,7 +170,10 @@ function App() {
       </div>
    
       </div>                                                                        
-
+      <div>
+          <LikeX/>
+      </div>
+      <div><br/></div>
       </div>                                                                      
                                                                                 
     </AmplifyAuthenticator>

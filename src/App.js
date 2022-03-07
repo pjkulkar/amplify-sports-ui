@@ -16,7 +16,7 @@ import awsConfig from './aws-exports'
 
 Amplify.configure(awsConfig)
 
-
+  
 function getLikeWatchedList () { 
    console.log("inside getLikeWatched")
   axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)

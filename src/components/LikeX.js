@@ -89,7 +89,7 @@ export default class LikeX extends React.Component {
                </tr>)
             }
             </tbody>
-          </Table>
+          </table>
         </header>
       </div>
     </div>

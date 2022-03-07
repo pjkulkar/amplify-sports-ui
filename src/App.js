@@ -14,7 +14,7 @@ import axios from 'axios'
 import awsConfig from './aws-exports'
 
 
-Amplify.configure(awsConfig)
+Amplify.configure(awsConfig) 
 
   
 function getLikeWatchedList () { 

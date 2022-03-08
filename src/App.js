@@ -109,7 +109,7 @@ handleItemChange(e){
       <div><br/></div> 
       <div><br/></div>                                                                         
       <div>
-          <LikeX userId={this.state.userId},itemId={this.state.itemId}/>
+          <LikeX userId={this.state.userId} itemId={this.state.itemId}/>
       </div>
       <div><br/></div>
       <div><br/></div>                                                                         

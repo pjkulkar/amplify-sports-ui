@@ -100,71 +100,17 @@ function populateDate(username,video,vote){
     })
   };
 
+function App() {
 
-class App extends Component { 
-  
-  constructor(){
-  super()
-  this.userIdTemp = 10;
-  this.itemIdTemp = 24;
-  this.state = {
-    userId:10,
-    itemId:10,
-    
-   }
-    console.log("in constructor log")
-    console.log("this.userIdTemp")
-    console.log(this.userIdTemp)
-    console.log("this.state.userId")
-    console.log(this.state.userId)
-    
- } 
 
-changeState(userId,itemId)
-{
-    console.log("in changeState")
-  this.state.userId = userId
-  this.state.itemId = itemId
+
+const [userId, setuserId] = useState("");
+
+const [movieId, setmovieId] = useState("");
+
+
   
 
-    console.log("this.userIdTemp")
-    console.log(this.userIdTemp)
-    console.log("this.state.userId")
-    console.log(this.state.userId)
-    
-}
-
-
- handleUserChange(e){
-    console.log("in handleUserChange")
-   this.userIdTemp = e.target.value;
-
-    console.log("this.userIdTemp")
-    console.log(this.userIdTemp)
-    console.log("this.state.userId")
-    console.log(this.state.userId)
-    
-}
-
-
-handleItemChange(e){
-   console.log("in handleItemChange")
-  this.itemIdTemp = e.target.value;
-
-    console.log("this.userIdTemp")
-    console.log(this.userIdTemp)
-    console.log("this.state.userId")
-    console.log(this.state.userId)
-    
-}
-  
-  render(){
-    console.log("in render")
-    console.log("this.userIdTemp")
-    console.log(this.userIdTemp)
-    console.log("this.state.userId")
-    console.log(this.state.userId)
-    
     return(
     
     <AmplifyAuthenticator>
@@ -229,7 +175,7 @@ handleItemChange(e){
 
      
   );
-  }
+  
 }
 
 const nav = { padding: '0px 40px', height: 60, borderBottom: '1px solid #ddd', display: 'flex', alignItems: 'center' }

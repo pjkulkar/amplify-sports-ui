@@ -151,13 +151,13 @@ const [movieId, setmovieId] = useState("");
           type="text"
           value={userId}
           placeholder="userId"
-          default=10
+          defaultValue='10'
           onChange={(e) => setuserId(e.target.value)}
         />
         <input
           type="text"
           value={movieId}
-          default=10
+          defaultValue='10'
           placeholder="movieId"
           onChange={(e) => setmovieId(e.target.value)}
 

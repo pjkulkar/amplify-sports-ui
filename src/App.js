@@ -111,8 +111,10 @@ function App() {
       </div>
       <div><br/></div>
       <div>
-          <TopPicks/>
+          <TopPicks/> <LikeWatched/>
       </div>
+                                                                                
+                                                                                
                                                                                 
                                                                                 
                                                                                 

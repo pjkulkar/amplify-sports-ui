@@ -54,9 +54,7 @@ class App extends Component {
     itemId,
     
    }
-  
-  
-  } 
+ } 
   
  handleUserChange(e){
     this.userIdTemp = e.target.value;
@@ -108,15 +106,18 @@ handleItemChange(e){
 
    
       </div>
-      <div><br/></div>                                                                          
+      <div><br/></div> 
+      <div><br/></div>                                                                         
       <div>
           <LikeX/>
       </div>
       <div><br/></div>
+      <div><br/></div>                                                                         
       <div>
           <TopPicks/> 
        </div>
        <div><br/></div>
+       <div><br/></div>                                                                            
        <div>                                                                       
           <LikeWatched/>
       </div>

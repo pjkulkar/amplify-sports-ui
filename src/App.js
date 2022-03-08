@@ -21,18 +21,6 @@ Amplify.configure(awsConfig)
 
   
 
-function getLikeXList (itemId,userId) { 
-  console.log("inside getLikeX")
-  const query = "https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=" + itemId + "&userId=" + userId;
-  console.log(query);
-  axios.get(query)
-    .then(res => {
-          console.log(res.data.itemList)
-          console.log("called lambdA") 
-          }).catch(err =>{
-      console.log(err);
-    })
-  }
 
 class App extends Component { 
   

@@ -20,28 +20,6 @@ import awsConfig from './aws-exports'
 Amplify.configure(awsConfig) 
 
   
-function getLikeWatchedList () { 
-   console.log("inside getLikeWatched")
-  axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
-    .then(res => {
-          console.log(res.data.itemList)
-          console.log("called lambdA. ss")
-          }).catch(err =>{
-      console.log(err);
-    })
-  }
-
-
-function getTopPickedList () { 
-   console.log("inside getTopPicked")
-  axios.get(`https://dujmlvrgc5.execute-api.us-west-2.amazonaws.com/test/toppicks?userId=55`)
-    .then(res => {
-          console.log(res.data.itemList)
-          console.log("called lambdA")
-          }).catch(err =>{
-      console.log(err);
-    })
-  }
 
 function getLikeXList (itemId,userId) { 
   console.log("inside getLikeX")

@@ -82,14 +82,14 @@ class App extends Component {
                                                                                 
           <input
           type="text"
-          value={userId}
+          value={this.state.userId}
           placeholder="userId"
           onChange={(e) => {this.handleUserChange(e)}}
         />
         <input
           type="text"
           value={movieId}
-          placeholder="movieId"
+          placeholder="this.state.movieId"
           onChange={(e) => {this.handleItemChange(e)}}
         />
          

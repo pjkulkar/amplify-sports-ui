@@ -121,7 +121,13 @@ handleItemChange(e){
           onChange={(e) => {this.handleItemChange(e)}}
         />
          
-         <input id="submit" name="submit" type="submit" value="Submit" onclick={this.changeState(this.userIdTemp,this.itemIdTemp).bind(this)}/>
+         <input 
+         id="submit" 
+         name="submit" 
+         type="submit" 
+         value="Submit" 
+        onclick={this.changeState(this.userIdTemp,this.itemIdTemp).bind(this)}
+        />
 
    
       </div>

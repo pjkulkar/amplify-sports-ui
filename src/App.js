@@ -143,8 +143,11 @@ handleItemChange(e){
                                                                                                                                                         
                                                                                 
       </div>                                                                      
-                                                                                
+      <div className='sign-out'>
+        <AmplifySignOut />
+      </div>                                                                  
     </AmplifyAuthenticator>
+
      
   );
   }

@@ -59,7 +59,7 @@ export default class LikeX extends React.Component {
           <table>
             <thead>
               <tr>
-                <th colSpan=2>Movies Like X</th>
+                <th colspan=2>Movies Like X</th>
                </tr>
               <tr>
                 <th>Movie Id</th>

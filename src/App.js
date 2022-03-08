@@ -109,8 +109,7 @@ class App extends Component {
        <div>                                                                       
           <LikeWatched/>
       </div>
-                                                                                
-                                                                               
+                                                                                                                                                        
                                                                                 
       </div>                                                                      
                                                                                 

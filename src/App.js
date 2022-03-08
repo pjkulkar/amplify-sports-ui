@@ -101,7 +101,7 @@ function App() {
           onChange={(e) => setmovieId(e.target.value)}
         />
          
-         <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
+         <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(this.state.userId,this.state.movieId)}/>
 
    
       </div>

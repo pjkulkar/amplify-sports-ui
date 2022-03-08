@@ -103,7 +103,11 @@ class App extends Component {
       </div>
       <div><br/></div>
       <div>
-          <TopPicks/> <LikeWatched/>
+          <TopPicks/> 
+       </div>
+       <div><br/></div>
+       <div>                                                                       
+          <LikeWatched/>
       </div>
                                                                                 
                                                                                

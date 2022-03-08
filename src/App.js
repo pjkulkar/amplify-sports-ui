@@ -56,9 +56,6 @@ class App extends Component {
   } 
   
   
- 
-
-  
   render(){
     
     return(
@@ -109,9 +106,7 @@ class App extends Component {
           <TopPicks/> <LikeWatched/>
       </div>
                                                                                 
-                                                                                
-                                                                                
-                                                                                
+                                                                               
                                                                                 
       </div>                                                                      
                                                                                 

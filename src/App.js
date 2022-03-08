@@ -100,6 +100,20 @@ function populateDate(username,video,vote){
     })
   };
 
+function getLikeXList (itemId,userId) { 
+console.log("inside getLikeX")
+const query = "https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=" + itemId + "&userId=" + userId;
+console.log(query);
+axios.get(query)
+.then(res => {
+console.log(res.data.itemList)
+console.log("called lambdA") 
+}).catch(err =>{
+console.log(err);
+})
+}
+
+
 function App() {
 
 
@@ -135,18 +149,20 @@ const [movieId, setmovieId] = useState("");
                                                                                 
           <input
           type="text"
-          value={this.userIdTemp}
+          value={userId}
           placeholder="userId"
-          onChange={(e) => {this.handleUserChange(e)}}
+          onChange={(e) => setuserId(e.target.value)}
         />
         <input
           type="text"
-          value={this.itemIdTemp}
+          value={movieId}
           placeholder="movieId"
-          onChange={(e) => {this.handleItemChange(e)}}
+          onChange={(e) => setmovieId(e.target.value)}
+
         />
          
-         <input id="submit" name="submit" type="submit" value="Submit" onclick={this.changeState(this.userIdTemp,this.itemIdTemp)}/>
+<input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
+
 
    
       </div>

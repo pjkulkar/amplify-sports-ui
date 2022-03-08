@@ -35,26 +35,35 @@ function getLikeXList (itemId,userId) {
   }
 
 
-function handleUserChange(e){
-    this.setState({userId: e.target.value });
-}
-
-
-function handleItemChange(e){
-    this.setState({itemId: e.target.value });
+function changeState(userId,itemId)
+{
+this.state.userId = userId
+  this.state.itemId = itemId
 }
 
 class App extends Component { 
   
+  
   constructor(){
   super()
   this.state = {
-    userId: 10,
-    itemId:24,
+    userId,
+    itemId,
     
    }
+  const userIdTemp;
+  const itemIdTemp;
+  
   } 
   
+ handleUserChange(e){
+    userIdTemp = e.target.value;
+}
+
+
+handleItemChange(e){
+    itemIdTemp = e.target.value;
+}
   
   render(){
     
@@ -82,18 +91,18 @@ class App extends Component {
                                                                                 
           <input
           type="text"
-          value={this.state.userId}
+          value={userIdTemp}
           placeholder="userId"
           onChange={(e) => {this.handleUserChange(e)}}
         />
         <input
           type="text"
-          value={this.state.movieId}
+          value={itemIdTemp}
           placeholder="movieId"
           onChange={(e) => {this.handleItemChange(e)}}
         />
          
-         <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(this.state.userId,this.state.movieId)}/>
+         <input id="submit" name="submit" type="submit" value="Submit" onclick={changeState(userIdTemp,itemIdTemp)}/>
 
    
       </div>

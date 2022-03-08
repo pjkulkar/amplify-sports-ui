@@ -5,6 +5,8 @@ import Amplify from 'aws-amplify'
 import LikeX from './components/LikeX.js'
 import TopPicks from './components/TopPicks.js'
 import LikeWatched from './components/LikeWatched.js'
+import videojs from 'video.js'
+import 'video.js/dist/video-js.css'
 
 import {
   AmplifyAuthenticator,
@@ -16,10 +18,87 @@ import { MdSend /* MdList */ } from 'react-icons/md'
 import axios from 'axios' 
 import awsConfig from './aws-exports'
 
+const thumbs_up = require('./assets/thumbs_up.png');
+const thumbs_down = require('./assets/thumbs_down.png');
 
 Amplify.configure(awsConfig) 
 
   
+class VideoPlayer extends React.Component {
+
+  componentDidMount() {
+    this.player = videojs(this.videoNode, this.props);
+  }
+
+  componentWillUnmount() {
+    if (this.player) {
+      this.player.dispose()
+    }
+  }
+
+  render() {
+    return (
+      
+      <div data-vjs-player style={{
+          width: 540, height: 320
+        }}>
+        <video  ref={(node) => { this.videoNode = node; }} className="video-js" />
+      </div>
+      
+
+    );
+  }
+}
+
+
+const useFetchData = (url) => {
+  const [state, setState] = useState({ isLoading: true, error: null, data: null });
+  useEffect(() => {
+    //let isMounted = true;  
+    axios.get(url)
+      .then((res) => {
+        console.log(res.data.Items.length)
+        if(res.data.Items.length === 3){
+          setState(
+          { isLoading: false, data: [
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[0].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[1].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[2].filepath.S}]}], 
+            error: null });
+        } else if (res.data.Items.length === 4){
+          setState(
+          { isLoading: false, data: [
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[0].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[1].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[2].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[3].filepath.S}]}], 
+            error: null });
+        } else if (res.data.Items.length === 5){
+          setState(
+          { isLoading: false, data: [
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[0].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[1].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[2].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[3].filepath.S}]},
+            {autoplay: false, controls: true,sources: [{src: res.data.Items[4].filepath.S}]}], 
+            error: null });
+        }
+      })
+      .catch((error) => {
+        setState({ isLoading: false, data: null, error });
+      });
+  }, [url]);
+  return state;
+};
+
+function populateDate(username,video,vote){
+    console.log(username,video,vote);
+    axios.post('https://dcyxom2xcc.execute-api.us-east-1.amazonaws.com/prod/updaterecord', {
+      username: username,
+      video: video,
+      vote: vote
+    })
+  };
 
 
 class App extends Component { 
@@ -158,3 +237,4 @@ const container = { paddingTop: 40, width: 960, margin: '0 auto' }
 const navHeading = { margin: 0, fontSize: 18 }
 
 export default App
+

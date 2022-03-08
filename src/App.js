@@ -59,8 +59,9 @@ class App extends Component {
  
 
   
-  render() (
+  render(){
     
+    return(
     
     <AmplifyAuthenticator>
       <AmplifySignIn
@@ -118,6 +119,7 @@ class App extends Component {
      
     
   );
+  }
 }
 
 const nav = { padding: '0px 40px', height: 60, borderBottom: '1px solid #ddd', display: 'flex', alignItems: 'center' }

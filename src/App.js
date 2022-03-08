@@ -34,13 +34,6 @@ function getLikeXList (itemId,userId) {
     })
   }
 
-
-function changeState(userId,itemId)
-{
-  this.state.userId = userId
-  this.state.itemId = itemId
-}
-
 class App extends Component { 
   
   
@@ -55,7 +48,14 @@ class App extends Component {
     
    }
  } 
-  
+
+changeState(userId,itemId)
+{
+  this.state.userId = userId
+  this.state.itemId = itemId
+}
+
+
  handleUserChange(e){
     this.userIdTemp = e.target.value;
 }

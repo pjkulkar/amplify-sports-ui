@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
+import React, { Component } from 'react'
 import './App.css'
 import Amplify from 'aws-amplify'
 import LikeX from './components/LikeX.js'
@@ -58,14 +59,15 @@ function getLikeXList (itemId,userId) {
 
 
 
-function App() {
+class App extends Component { 
   
   const [userId, setuserId] = useState("");
   const [movieId, setmovieId] = useState("");
   
  
 
-  return (
+  
+  render() (
     
     
     <AmplifyAuthenticator>

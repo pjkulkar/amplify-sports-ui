@@ -50,8 +50,8 @@ class App extends Component {
   this.userIdTemp = 10;
   this.itemIdTemp = 24;
   this.state = {
-    userId,
-    itemId,
+    userId:10,
+    itemId:10,
     
    }
  } 
@@ -91,13 +91,13 @@ handleItemChange(e){
                                                                                 
           <input
           type="text"
-          value={userIdTemp}
+          value={this.userIdTemp}
           placeholder="userId"
           onChange={(e) => {this.handleUserChange(e)}}
         />
         <input
           type="text"
-          value={itemIdTemp}
+          value={this.itemIdTemp}
           placeholder="movieId"
           onChange={(e) => {this.handleItemChange(e)}}
         />

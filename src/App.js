@@ -24,8 +24,6 @@ Amplify.configure(awsConfig)
 
 class App extends Component { 
   
-  
-  
   constructor(){
   super()
   this.userIdTemp = 10;

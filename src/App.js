@@ -26,8 +26,8 @@ class App extends Component {
   
   constructor(){
   super()
-  this.userIdTemp;
-  this.itemIdTemp;
+  this.userIdTemp = 10;
+  this.itemIdTemp = 24;
   this.state = {
     userId:10,
     itemId:10,
@@ -121,13 +121,7 @@ handleItemChange(e){
           onChange={(e) => {this.handleItemChange(e)}}
         />
          
-         <input 
-         id="submit" 
-         name="submit" 
-         type="submit" 
-         value="Submit" 
-        onclick={this.changeState(this.userIdTemp,this.itemIdTemp)}
-        />
+         <input id="submit" name="submit" type="submit" value="Submit" onclick={this.changeState(this.userIdTemp,this.itemIdTemp)}/>
 
    
       </div>

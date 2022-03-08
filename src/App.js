@@ -35,25 +35,58 @@ class App extends Component {
     itemId:10,
     
    }
+    console.log("in constructor")
+    console.log("this.userIdTemp")
+    console.log(this.userIdTemp)
+    console.log("this.state.userId")
+    console.log(this.state.userId)
+    
  } 
 
 changeState(userId,itemId)
 {
+    console.log("in changeState")
   this.state.userId = userId
   this.state.itemId = itemId
+  
+
+    console.log("this.userIdTemp")
+    console.log(this.userIdTemp)
+    console.log("this.state.userId")
+    console.log(this.state.userId)
+    
 }
 
 
  handleUserChange(e){
-    this.userIdTemp = e.target.value;
+    console.log("in handleUserChange")
+   this.userIdTemp = e.target.value;
+
+    console.log("this.userIdTemp")
+    console.log(this.userIdTemp)
+    console.log("this.state.userId")
+    console.log(this.state.userId)
+    
 }
 
 
 handleItemChange(e){
-    this.itemIdTemp = e.target.value;
+   console.log("in handleItemChange")
+  this.itemIdTemp = e.target.value;
+
+    console.log("this.userIdTemp")
+    console.log(this.userIdTemp)
+    console.log("this.state.userId")
+    console.log(this.state.userId)
+    
 }
   
   render(){
+    console.log("in render")
+    console.log("this.userIdTemp")
+    console.log(this.userIdTemp)
+    console.log("this.state.userId")
+    console.log(this.state.userId)
     
     return(
     
@@ -90,7 +123,7 @@ handleItemChange(e){
           onChange={(e) => {this.handleItemChange(e)}}
         />
          
-         <input id="submit" name="submit" type="submit" value="Submit" onclick={changeState(this.userIdTemp,this.itemIdTemp)}/>
+         <input id="submit" name="submit" type="submit" value="Submit" onclick={this.changeState(this.userIdTemp,this.itemIdTemp)}/>
 
    
       </div>

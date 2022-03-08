@@ -127,7 +127,6 @@ handleItemChange(e){
                                                                                 
     </AmplifyAuthenticator>
      
-    
   );
   }
 }

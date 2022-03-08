@@ -46,11 +46,15 @@ function handleItemChange(e){
 
 class App extends Component { 
   
+  constructor(){
+  super()
   this.state = {
     userId: 10,
     itemId:24,
     
    }
+  } 
+  
   
  
 

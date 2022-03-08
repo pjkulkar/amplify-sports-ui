@@ -33,7 +33,7 @@ class App extends Component {
     itemId:10,
     
    }
-    console.log("in constructor")
+    console.log("in constructor log")
     console.log("this.userIdTemp")
     console.log(this.userIdTemp)
     console.log("this.state.userId")

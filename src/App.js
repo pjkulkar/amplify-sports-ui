@@ -151,11 +151,13 @@ const [movieId, setmovieId] = useState("");
           type="text"
           value={userId}
           placeholder="userId"
+          default=10
           onChange={(e) => setuserId(e.target.value)}
         />
         <input
           type="text"
           value={movieId}
+          default=10
           placeholder="movieId"
           onChange={(e) => setmovieId(e.target.value)}
 
@@ -169,7 +171,7 @@ const [movieId, setmovieId] = useState("");
       <div><br/></div> 
       <div><br/></div>                                                                         
       <div>
-          <LikeX userId={this.state.userId} itemId={this.state.itemId}/>
+          <LikeX userId={userId} itemId={movieId}/>
       </div>
       <div><br/></div>
       <div><br/></div>                                                                         

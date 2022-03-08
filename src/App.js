@@ -3,6 +3,7 @@ import './App.css'
 import Amplify from 'aws-amplify'
 import LikeX from './components/LikeX.js'
 import TopPicks from './components/TopPicks.js'
+import LikeWatched from './components/LikeWatched.js'
 
 import {
   AmplifyAuthenticator,

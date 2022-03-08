@@ -88,8 +88,8 @@ class App extends Component {
         />
         <input
           type="text"
-          value={movieId}
-          placeholder="this.state.movieId"
+          value={this.state.movieId}
+          placeholder="movieId"
           onChange={(e) => {this.handleItemChange(e)}}
         />
          

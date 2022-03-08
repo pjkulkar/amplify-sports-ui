@@ -35,12 +35,12 @@ function getLikeXList (itemId,userId) {
   }
 
 
-handleUserChange(e){
+function handleUserChange(e){
     this.setState({userId: e.target.value });
 }
 
 
-handleItemChange(e){
+function handleItemChange(e){
     this.setState({itemId: e.target.value });
 }
 
@@ -82,13 +82,13 @@ class App extends Component {
           type="text"
           value={userId}
           placeholder="userId"
-          onChange={(e) => {this.handleUserChange(e)}
+          onChange={(e) => {this.handleUserChange(e)}}
         />
         <input
           type="text"
           value={movieId}
           placeholder="movieId"
-          onChange={(e) => this.handleItemChange(e)}
+          onChange={(e) => {this.handleItemChange(e)}}
         />
          
          <input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(this.state.userId,this.state.movieId)}/>

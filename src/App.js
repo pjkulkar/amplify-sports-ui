@@ -126,7 +126,7 @@ handleItemChange(e){
          name="submit" 
          type="submit" 
          value="Submit" 
-        onclick={this.changeState(this.userIdTemp,this.itemIdTemp).bind(this)}
+        onclick={this.changeState(this.userIdTemp,this.itemIdTemp)}
         />
 
    

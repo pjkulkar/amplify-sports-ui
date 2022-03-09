@@ -15,6 +15,7 @@ export default class TopPicks extends React.Component {
   } 
   
   componentDidMount() {
+    console.log("this.props.userId" + this.props.userId)
    axios.get('https://dujmlvrgc5.execute-api.us-west-2.amazonaws.com/test/toppicks?userId=55')
       .then(res => {
         console.log('res.data.itemslist')

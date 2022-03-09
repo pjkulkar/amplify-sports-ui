@@ -200,9 +200,7 @@ const [movieId, setmovieId] = useState("");
        </div>
        <div><br/></div>
        <div><br/></div>                                                                            
-       <div>                                                                       
-          <LikeWatched/>
-      </div>
+       
                                                                                                                                                         
                                                                                 
       </div>                                                                      

@@ -163,7 +163,7 @@ const [movieId, setmovieId] = useState("");
         
         
          
-      <input id="submit" name="submit" type="submit" value="User1" onclick={e => setuserId(e.target.value)}/>
+      <input id="submit" name="submit" type="submit" value="User1" onclick={e => setuserId(13)}/>
       <input id="submit" name="submit" type="submit" value="User2" onclick={getLikeXList(userId,movieId)}/>
       <input id="submit" name="submit" type="submit" value="User3" onclick={getLikeXList(userId,movieId)}/>
 

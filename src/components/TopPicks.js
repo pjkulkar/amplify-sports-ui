@@ -39,6 +39,7 @@ export default class TopPicks extends React.Component {
   }
 
   render() {
+    
     console.log('in render: isloading ' + this.state.isLoading)
     console.log('this.state.itemslist' )
     console.log( this.state.itemsList)
@@ -56,7 +57,7 @@ export default class TopPicks extends React.Component {
     console.log("inside render before return") 
     return (
      <div>
-    
+     <div>The data from parent is: {this.props.userId}</div>
      <div>
           <table>
             <thead>

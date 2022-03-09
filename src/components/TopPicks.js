@@ -9,7 +9,7 @@ export default class TopPicks extends React.Component {
     itemsList: [],
     isLoading:true,
     error:false,
-    data: this.props.userId
+    userId: this.props.userId
     
     }
   } 

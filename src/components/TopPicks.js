@@ -56,7 +56,7 @@ export default class LikeX extends React.Component {
     console.log("inside render before return") 
     return (
      <div>
-     <div>The data from parent is: {this.props.userId}</div>;
+     <div>The data from parent is: {this.props}</div>
      <div>
           <table>
             <thead>

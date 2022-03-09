@@ -57,7 +57,7 @@ export default class TopPicks extends React.Component {
     console.log("inside render before return") 
     return (
      <div>
-     <div>The data from parent is: {this.props}</div>
+     <div>The data from parent is: {this.props.userId}</div>
      <div>
           <table>
             <thead>

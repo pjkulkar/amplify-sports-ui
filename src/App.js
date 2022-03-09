@@ -172,7 +172,7 @@ const [movieId, setmovieId] = useState(22);
       </div>
        
        <div>
-         <TopPicks userId={userId} itemId={movieId}/>                                                                   
+         <TopPicks userId={this.state.userId} itemId={this.state.movieId}/>                                                                   
        </div>
          <div><br/></div> 
       <div><br/></div>                                                                         

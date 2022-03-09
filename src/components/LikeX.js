@@ -71,7 +71,7 @@ export default class LikeX extends React.Component {
               this.state.itemsList
               .map(itemList =>
                 <tr><td>{itemList.itemId}</td>
-                    <td>{itemList.TITLE}</td>
+                    <td>{itemList.itemId}</td>
                 </tr>
               )
              }

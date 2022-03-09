@@ -61,17 +61,12 @@ export default class LikeX extends React.Component {
               <tr>
                 <th>Movies Like X</th>
                </tr>
-              <tr>
-                <th>Movie Id</th>
-                <th>Movie Name</th>
-               </tr>
             </thead>
             <tbody>
             {
               this.state.itemsList
               .map(itemList =>
-                <tr><td>{itemList.itemId}</td>
-                    <td>{itemList.itemId}</td>
+                <tr><td>{itemList[0]}</td>
                 </tr>
               )
              }

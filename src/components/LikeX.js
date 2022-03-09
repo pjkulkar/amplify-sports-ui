@@ -21,11 +21,11 @@ export default class LikeX extends React.Component {
         console.log('res.data.item0' + res.data.itemList[0].itemId)
         const itemsList = res.data.itemList
         console.log('movList' + itemsList)
-        console.log('movList item 0' + itemsList[0].itemId)
+        console.log('movList item 0' + itemsList[0].[0].itemId)
         this.setState({ itemsList})
         console.log('this.state.itemslist' )
         console.log( this.state.itemsList)
-        console.log('this.state.itemsList item 0' + this.state.itemsList[0].itemId)
+        console.log('this.state.itemsList item 0' + this.state.itemsList.itemId)
         if(this.state.itemsList){
           this.setState({isLoading:false, error:false});
           console.log("inside mount after setstate")

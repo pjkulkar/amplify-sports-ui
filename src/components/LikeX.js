@@ -21,7 +21,7 @@ export default class LikeX extends React.Component {
         console.log('res.data.item0' + res.data.itemList[0].itemId)
         const itemsList = res.data.itemList
         console.log('movList' + itemsList)
-        console.log('movList item 0' + itemsList[0].[0].itemId)
+        console.log('movList item 0' + itemsList[0].itemId)
         this.setState({ itemsList})
         console.log('this.state.itemslist' )
         console.log( this.state.itemsList)

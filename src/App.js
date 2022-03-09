@@ -122,7 +122,9 @@ const [userId, setuserId] = useState("");
 
 const [movieId, setmovieId] = useState("");
 
-
+  const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>There was an error: {error}</div>;
   
 
     return(
@@ -167,6 +169,20 @@ const [movieId, setmovieId] = useState("");
 
 
    
+      </div>
+<div>       
+<table>
+          <tbody>
+            <tr>
+              <th>Video</th>
+              <th>Vote</th>
+            </tr>
+            {data.map(function(object, i){
+              //console.log(object);
+                return <tr><td><VideoPlayer { ...object  }/></td><td><img src={thumbs_up} alt="Thumbs Up" onClick={() => populateDate('hnvasa@gmail.com',object.sources[0].src,'upvote')} /><img src={thumbs_down} alt="Thumbs Down" onClick={() => populateDate('hnvasa@gmail.com',object.sources[0].src,'downvote')} /></td></tr>;
+            })}
+          </tbody>
+        </table>
       </div>
       <div><br/></div> 
       <div><br/></div>                                                                         

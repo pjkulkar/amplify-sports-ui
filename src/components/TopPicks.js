@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
   
-export default class LikeX extends React.Component {
+export default class TopPicks extends React.Component {
   
   constructor(){
   super()
@@ -56,7 +56,7 @@ export default class LikeX extends React.Component {
     console.log("inside render before return") 
     return (
      <div>
-     <div>The data from parent is: {this.props}</div>
+    
      <div>
           <table>
             <thead>

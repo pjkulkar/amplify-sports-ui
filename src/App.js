@@ -174,6 +174,16 @@ const [movieId, setmovieId] = useState("");
        <div>
          <TopPicks userId={userId} itemId={movieId}/>                                                                   
        </div>
+         <div><br/></div> 
+      <div><br/></div>                                                                         
+      <div>
+          <LikeX/>
+      </div>
+      <div><br/></div>
+      <div><br/></div>                                                                         
+       <div>                                                                       
+          <LikeWatched/>
+      </div>
 <div>       
 <table>
           <tbody>

@@ -123,9 +123,9 @@ function App() {
 
 let forceUpdate = useForceUpdate(); 
 
-const [userId, setuserId] = useState("");
+const [userId, setuserId] = useState(10);
 
-const [movieId, setmovieId] = useState("");
+const [movieId, setmovieId] = useState(22);
 
   const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
   if (isLoading) return <div>Loading...</div>;
@@ -164,8 +164,8 @@ const [movieId, setmovieId] = useState("");
         
          
       <input id="submit" name="submit" type="submit" value="User1" onclick={e => setuserId(13)}/>
-      <input id="submit" name="submit" type="submit" value="User2" onclick={getLikeXList(userId,movieId)}/>
-      <input id="submit" name="submit" type="submit" value="User3" onclick={getLikeXList(userId,movieId)}/>
+      <input id="submit" name="submit" type="submit" value="User2" onclick={e => setuserId(25)}/>
+      <input id="submit" name="submit" type="submit" value="User3" onclick={e => setuserId(45)}/>
 
 
    

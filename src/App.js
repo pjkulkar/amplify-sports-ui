@@ -113,8 +113,9 @@ console.log(err);
 })
 }
 
-fuction setUserId(userInpId){
- setState(userId:userInpId) 
+function useForceUpdate() {
+  let [value, setState] = useState(true);
+  return () => setState(!value);
 }
 
 
@@ -129,9 +130,10 @@ const [movieId, setmovieId] = useState("");
   const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>There was an error: {error}</div>;
-  
+  let forceUpdate = useForceUpdate();  
 
     return(
+      
     
     <AmplifyAuthenticator>
       <AmplifySignIn
@@ -144,17 +146,18 @@ const [movieId, setmovieId] = useState("");
       />
     
     
-
+    
     <div>
       <nav style={nav}>
         <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
      
+
       <div style={container}>
         
         
          
-      <input id="submit" name="submit" type="submit" value="User1" onclick={getLikeXList(userId,movieId)}/>
+      <input id="submit" name="submit" type="submit" value="User1" onclick={e => setuserId(e.target.value)}/>
       <input id="submit" name="submit" type="submit" value="User2" onclick={getLikeXList(userId,movieId)}/>
       <input id="submit" name="submit" type="submit" value="User3" onclick={getLikeXList(userId,movieId)}/>
 
@@ -162,7 +165,13 @@ const [movieId, setmovieId] = useState("");
    
       </div>
        <div>
-         <LikeX userId={userId} itemId={movieId}/>                                                                   
+          <h1>{count++} times clicked</h1>
+
+          <button onClick={forceUpdate}>Refresh</button>
+      </div>
+
+       <div>
+         <TopPicks userId={userId} itemId={movieId}/>                                                                   
        </div>
 <div>       
 <table>

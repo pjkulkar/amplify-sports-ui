@@ -113,6 +113,10 @@ console.log(err);
 })
 }
 
+fuction setUserId(userInpId){
+ setState(userId:userInpId) 
+}
+
 
 function App() {
 
@@ -148,28 +152,18 @@ const [movieId, setmovieId] = useState("");
      
       <div style={container}>
         
-                                                                                
-          <input
-          type="text"
-          value={userId}
-          placeholder="userId"
-          defaultValue='10'
-          onChange={(e) => setuserId(e.target.value)}
-        />
-        <input
-          type="text"
-          value={movieId}
-          defaultValue='10'
-          placeholder="movieId"
-          onChange={(e) => setmovieId(e.target.value)}
-
-        />
+        
          
-<input id="submit" name="submit" type="submit" value="Submit" onclick={getLikeXList(userId,movieId)}/>
+      <input id="submit" name="submit" type="submit" value="User1" onclick={getLikeXList(userId,movieId)}/>
+      <input id="submit" name="submit" type="submit" value="User2" onclick={getLikeXList(userId,movieId)}/>
+      <input id="submit" name="submit" type="submit" value="User3" onclick={getLikeXList(userId,movieId)}/>
 
 
    
       </div>
+       <div>
+         <LikeX userId={userId} itemId={movieId}/>                                                                   
+       </div>
 <div>       
 <table>
           <tbody>

@@ -62,8 +62,7 @@ export default class TopPicks extends React.Component {
           <table>
             <thead>
               <tr>
-                <th>Movie Id</th>
-                <th>Movie Name</th>
+                <th>Top Piks for you</th>
                </tr>
             </thead>
             <tbody> 
@@ -71,7 +70,6 @@ export default class TopPicks extends React.Component {
               this.state.itemsList
               .map(itemList =>
                 <tr><td>{itemList[0]}</td>
-                    <td>{itemList[0]}</td>
                 </tr>
               )
              }

@@ -70,8 +70,8 @@ export default class TopPicks extends React.Component {
             {
               this.state.itemsList
               .map(itemList =>
-                <tr><td>{itemList.itemId}</td>
-                    <td>{itemList.itemId}</td>
+                <tr><td>{this.state.itemslist.itemId}</td>
+                    <td>{this.state.itemslist.itemId}</td>
                 </tr>
               )
              }

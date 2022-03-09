@@ -23,7 +23,7 @@ export default class TopPicks extends React.Component {
         console.log('movList' + itemsList)
         console.log('movList item 0' + itemsList[0].itemId)
         this.setState({ itemsList})
-        console.log('this.state.itemslist')
+        console.log('this.state.itemsList')
         console.log( this.state.itemsList)
         console.log('this.state.itemsList item 0' + this.state.itemsList[0].itemId)
         if(this.state.itemsList){
@@ -70,8 +70,8 @@ export default class TopPicks extends React.Component {
             {
               this.state.itemsList
               .map(itemList =>
-                <tr><td>{this.state.itemslist.itemId}</td>
-                    <td>{this.state.itemslist.itemId}</td>
+                <tr><td>{this.state.itemsList.itemId}</td>
+                    <td>{this.state.itemsList.itemId}</td>
                 </tr>
               )
              }

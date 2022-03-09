@@ -118,10 +118,10 @@ function useForceUpdate() {
   return () => setState(!value);
 }
 
-
+let count = 0;
 function App() {
 
-
+let forceUpdate = useForceUpdate(); 
 
 const [userId, setuserId] = useState("");
 
@@ -130,7 +130,7 @@ const [movieId, setmovieId] = useState("");
   const { isLoading, data, error } = useFetchData("https://56lor2kfz8.execute-api.us-east-1.amazonaws.com/test/videos");
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>There was an error: {error}</div>;
-  let forceUpdate = useForceUpdate();  
+   
 
     return(
       
@@ -145,13 +145,19 @@ const [movieId, setmovieId] = useState("");
         slot='sign-up'
       />
     
-    
+    <div>
+          <h1>{count++} times clicked</h1>
+
+          <button onClick={forceUpdate}>Refresh</button>
+      </div>
+
     
     <div>
       <nav style={nav}>
         <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
-     
+       
+      
 
       <div style={container}>
         
@@ -164,12 +170,7 @@ const [movieId, setmovieId] = useState("");
 
    
       </div>
-       <div>
-          <h1>{count++} times clicked</h1>
-
-          <button onClick={forceUpdate}>Refresh</button>
-      </div>
-
+       
        <div>
          <TopPicks userId={userId} itemId={movieId}/>                                                                   
        </div>

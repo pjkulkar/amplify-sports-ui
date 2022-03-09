@@ -3,8 +3,8 @@ import axios from 'axios';
   
 export default class TopPicks extends React.Component {
   
-  constructor(){
-  super()
+  constructor(props){
+  super(props)
   this.state = {
     itemsList: [],
     isLoading:true,

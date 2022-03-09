@@ -43,6 +43,7 @@ export default class LikeX extends React.Component {
     console.log('this.state.itemslist' )
     console.log( this.state.itemsList)
     
+    
     console.log('in render: error ' + this.state.error)
     if (this.state.isLoading) return <div>Loading...</div>;
     if (this.state.error) return <div>There was an error:{this.state.error}</div>;
@@ -55,6 +56,7 @@ export default class LikeX extends React.Component {
     console.log("inside render before return") 
     return (
      <div>
+     <div>The data from parent is: {this.props.userId}</div>;
      <div>
           <table>
             <thead>

@@ -25,7 +25,7 @@ export default class LikeX extends React.Component {
         this.setState({ itemsList})
         console.log('this.state.itemslist' )
         console.log( this.state.itemsList)
-        console.log('this.state.itemsList item 0' + this.state.itemsList.itemId)
+        console.log('this.state.itemsList item 0' + this.state.itemsList[0].itemId)
         if(this.state.itemsList){
           this.setState({isLoading:false, error:false});
           console.log("inside mount after setstate")
@@ -50,7 +50,7 @@ export default class LikeX extends React.Component {
     console.log("inside render")
     console.log('this.state.itemslist' )
     console.log( this.state.itemsList)
-    console.log('this.state.itemsList item 0' + this.state.itemsList[0].itemId[0])
+    console.log('this.state.itemsList item 0' + this.state.itemsList[0].itemId)
     
     console.log("inside render before return")
     return (
@@ -86,5 +86,3 @@ export default class LikeX extends React.Component {
     )
   }
 }
-
-

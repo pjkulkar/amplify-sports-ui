@@ -26,6 +26,7 @@ export default class TopPicks extends React.Component {
       .then(res => {
         console.log('res.data.itemslist')
         console.log(res.data.itemList)
+     
         
         console.log('res.data.item0' + res.data.itemList[0].itemId)
         const itemsList = res.data.itemList

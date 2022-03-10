@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './App.css'
   
 export default class LikeX extends React.Component {
   
@@ -77,6 +78,20 @@ export default class LikeX extends React.Component {
       
     
       </div>
+
+<div classname=“containerMovie”>
+  <div>Grid starts here</div>
+    <div className="myDivContainer">
+      <div className=“mydiv”>test</div>
+      <div className=“mydiv”>test</div>
+      <div className=“mydiv”>test</div>
+      <div className=“mydiv”>jhgjhg</div>
+    <div className=“mydiv”>gdh</div>
+  </div>
+</div>
+
+
+</div>
       
     )
   }

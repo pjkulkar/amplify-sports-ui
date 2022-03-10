@@ -97,7 +97,7 @@ const [movieId, setmovieId] = useState(22);
       </div>                                                                  
     </AmplifyAuthenticator>
 
-  const Columns = () => 
+ 
    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
     <div>Column 1</div>
     <div>Column 2</div>

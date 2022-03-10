@@ -13,7 +13,7 @@ export default class LikeX extends React.Component {
   } 
   
   componentDidMount() {
-   axios.get(`https://btv7vn2xd3.execute-api.us-west-2.amazonaws.com/test/likewatched?itemId=24&userId=10`)
+   axios.get(`https://bt1m7jsjsj.execute-api.us-west-2.amazonaws.com/test/likex?itemId=24&userId=10`)
       .then(res => {
         console.log('res.data.itemslist')
         console.log(res.data.itemList)

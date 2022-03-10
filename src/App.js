@@ -64,6 +64,19 @@ const [movieId, setmovieId] = useState(22);
         <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
        
+      <div>
+      <div>
+        <div>
+          One of three columns
+        </div>
+        <div>
+          One of three columns
+        </div>
+        <div>
+          One of three columns
+        </div>
+      </div>
+    </div>
       
 
       <div style={container}>

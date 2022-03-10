@@ -52,13 +52,7 @@ const [movieId, setmovieId] = useState(22);
         slot='sign-up'
       />
     
-    <div>
-          <h1>{count++} times clicked</h1>
-
-          <button onClick={forceUpdate}>Refresh</button>
-      </div>
-
-    
+   
     <div>
       <nav style={nav}>
         <p style={navHeading}>Welcome to Octank Video!</p>
@@ -97,12 +91,7 @@ const [movieId, setmovieId] = useState(22);
       </div>                                                                  
     </AmplifyAuthenticator>
 
- 
-   <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
-    <div>Column 1</div>
-    <div>Column 2</div>
-    <div>Column 3</div>
-  </div>
+
 
      
   );

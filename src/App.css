@@ -87,6 +87,10 @@ body {
   line-height: 1.1;
 }
 
+.myDivContainer{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .video-uploader {
   margin-left: 0;
   margin-right: 0;

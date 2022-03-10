@@ -64,20 +64,7 @@ const [movieId, setmovieId] = useState(22);
         <p style={navHeading}>Welcome to Octank Video!</p>
       </nav>
        
-      <div>
-      <div>
-        <div>
-          One of three columns
-        </div>
-        <div>
-          One of three columns
-        </div>
-        <div>
-          One of three columns
-        </div>
-      </div>
-    </div>
-      
+     
 
       <div style={container}>
         
@@ -109,6 +96,13 @@ const [movieId, setmovieId] = useState(22);
         <AmplifySignOut />
       </div>                                                                  
     </AmplifyAuthenticator>
+
+  const Columns = () => 
+   <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
+    <div>Column 1</div>
+    <div>Column 2</div>
+    <div>Column 3</div>
+  </div>
 
      
   );

@@ -70,9 +70,9 @@ const [movieId, setmovieId] = useState(22);
         
         
          
-      <input id="submit" name="submit" type="submit" value="User1" onclick={e => setuserId(13)}/>
-      <input id="submit" name="submit" type="submit" value="User2" onclick={e => setuserId(25)}/>
-      <input id="submit" name="submit" type="submit" value="User3" onclick={e => setuserId(45)}/>
+      <input id="submit" name="submit" type="submit" value="User1" onclick={setuserId(13)}/>
+      <input id="submit" name="submit" type="submit" value="User2" onclick={setuserId(25)}/>
+      <input id="submit" name="submit" type="submit" value="User3" onclick={setuserId(45)}/>
 
 
    

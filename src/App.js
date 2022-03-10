@@ -40,7 +40,7 @@ const [movieId, setmovieId] = useState(22);
    
 
     return(
-      
+        
     
     <AmplifyAuthenticator>
       <AmplifySignIn

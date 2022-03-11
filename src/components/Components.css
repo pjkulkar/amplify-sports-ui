@@ -93,16 +93,16 @@ body {
   background-color: rgb(244, 255, 255);
   border: 1px solid #ffffff;
   text-align: left;
-  padding: 8px;
-  font-size: 12px;
+  padding: 25px;
+  font-size: 16px;
 }
 
 .myDivHeader{
   background-color: rgb(175, 238, 238);
-  border: 1px solid #ffffff;
+  border: 1px solid #e0e0e0;
   text-align: center;
   padding: 8px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 

@@ -77,12 +77,11 @@ export default class LikeX extends React.Component {
       </div>
       
     
-      </div>
+   
 
 
 
-<div classname=“containerMovie”>
-  <div>Grid starts here
+  <div>
     <div className="myDivContainer">
       <div className=“mydiv”>test</div>
       <div className=“mydiv”>test</div>
@@ -91,8 +90,8 @@ export default class LikeX extends React.Component {
       <div className=“mydiv”>gdh</div>      
     </div>
   </div>
-</div>
 
+   </div>
       
     )
   }

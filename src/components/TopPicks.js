@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Components.css'
 
 
 export default class TopPicks extends React.Component {

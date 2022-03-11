@@ -83,11 +83,12 @@ export default class LikeX extends React.Component {
 
   <div>
     <div className="myDivContainer">
-      <div>test</div>
-      <div>test</div>
-      <div>test</div>
-      <div>jhgjhg</div>
-      <div>gdh</div>      
+      {
+              this.state.itemsList
+              .map(itemList =>
+                <div>{itemList[0]}</div>
+              )
+      }
     </div>
   </div>
 

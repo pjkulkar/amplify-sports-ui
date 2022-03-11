@@ -83,11 +83,11 @@ export default class LikeX extends React.Component {
 
   <div>
     <div className="myDivContainer">
-      <div className=“mydiv”>test</div>
-      <div className=“mydiv”>test</div>
-      <div className=“mydiv”>test</div>
-      <div className=“mydiv”>jhgjhg</div>
-      <div className=“mydiv”>gdh</div>      
+      <div>test</div>
+      <div>test</div>
+      <div>test</div>
+      <div>jhgjhg</div>
+      <div>gdh</div>      
     </div>
   </div>
 

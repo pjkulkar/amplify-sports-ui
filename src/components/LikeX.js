@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './src/App.css'
+import './Component.css'
   
 export default class LikeX extends React.Component {
   

@@ -57,23 +57,20 @@ export default class LikeWatched extends React.Component {
     return (
      <div>
      <div>
-    <div className="myDivHeader">
-      Movies Like You Watched 
-    </div>
-    <div className="myDivContainer">
-      {
+          <div className="myDivHeader">
+          Movies Like You Watched 
+        </div>
+        <div className="myDivContainer">
+          {
               this.state.itemsList
               .map(itemList =>
                 <div>{itemList[0]}</div>
               )
-      }
+          }
+        </div>
     </div>
-  </div>
 
-   </div>
-      
-      
-    
+   
       </div>
       
     )

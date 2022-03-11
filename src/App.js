@@ -97,7 +97,7 @@ const [movieId, setmovieId] = useState(22);
   );
   
 }
-
+ 
 const nav = { padding: '0px 40px', height: 60, borderBottom: '1px solid #ddd', display: 'flex', alignItems: 'center' }
 const container = { paddingTop: 40, width: 960, margin: '0 auto' }
 const navHeading = { margin: 0, fontSize: 18 }

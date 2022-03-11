@@ -79,9 +79,7 @@ export default class TopPicks extends React.Component {
     </div>
 
    </div>
-      
     
-      </div>
       
     )
   }

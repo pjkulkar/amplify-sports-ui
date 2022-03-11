@@ -82,6 +82,9 @@ export default class LikeX extends React.Component {
 
 
   <div>
+    <div className="myDivHeader">
+      Movies Like X
+    </div>
     <div className="myDivContainer">
       {
               this.state.itemsList

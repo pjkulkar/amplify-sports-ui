@@ -63,27 +63,22 @@ export default class TopPicks extends React.Component {
     return (
      <div>
    
-
      <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Top Piks for you</th>
-               </tr>
-            </thead>
-            <tbody> 
-            {
+          <div className="myDivHeader">
+            Top Picks For You
+          </div>
+          <div className="myDivContainer">
+          {
               this.state.itemsList
               .map(itemList =>
-                <tr><td>{itemList[0]}</td>
-                </tr>
+                <div>{itemList[0]}</div>
               )
-             }
-            </tbody>
-          </table>
-        
-      </div>
+          }
+          </div>
+    </div>
 
+   </div>
+      
     
       </div>
       

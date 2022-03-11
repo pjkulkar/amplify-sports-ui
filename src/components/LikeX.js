@@ -56,44 +56,21 @@ export default class LikeX extends React.Component {
     console.log("inside render before return")
     return (
      <div>
-     <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Movies Like X</th>
-               </tr>
-            </thead>
-            <tbody> 
-            {
-              this.state.itemsList
-              .map(itemList =>
-                <tr><td>{itemList[0]}</td>
-                </tr>
-              )
-             }
-            </tbody>
-          </table>
-        
+    
+
+    <div>
+      <div className="myDivHeader">
+        Movies Like X
       </div>
-      
-    
-    
-
-
-
-  <div>
-    <div className="myDivHeader">
-      Movies Like X
-    </div>
-    <div className="myDivContainer">
+      <div className="myDivContainer">
       {
               this.state.itemsList
               .map(itemList =>
                 <div>{itemList[0]}</div>
               )
       }
+      </div>
     </div>
-  </div>
 
    </div>
       

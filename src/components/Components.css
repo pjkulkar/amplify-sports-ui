@@ -90,17 +90,17 @@ body {
 .myDivContainer{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
   background-color: rgb(244, 255, 255);
   border: 2px solid #afeeee;
   text-align: left;
-  padding: 25px;
+  padding: 10px;
   font-size: 12px;
 }
 
 .myDivHeader{
   background-color: rgb(175, 238, 238);
-  border: 2px solid #000000;
+  border: 2px solid #008080;
   text-align: center;
   padding: 8px;
   font-size: 16px;

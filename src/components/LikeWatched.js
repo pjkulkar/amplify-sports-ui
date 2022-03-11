@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import .\Components.css
   
 export default class LikeWatched extends React.Component {
   
@@ -56,24 +57,21 @@ export default class LikeWatched extends React.Component {
     return (
      <div>
      <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Movies Like You watched Before</th>
-               </tr>
-            </thead>
-            <tbody>
-            {
+    <div className="myDivHeader">
+      Movies Like You Watched 
+    </div>
+    <div className="myDivContainer">
+      {
               this.state.itemsList
               .map(itemList =>
-                <tr><td>{itemList[0]}</td>
-                </tr>
+                <div>{itemList[0]}</div>
               )
-             }
-            </tbody>
-          </table>
-        
-      </div>
+      }
+    </div>
+  </div>
+
+   </div>
+      
       
     
       </div>
